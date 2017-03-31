@@ -1,0 +1,21 @@
+<head>
+  <title>dapp</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+   
+</body>
+
+<template name="hello">
+  <p>{{counter}}  {{TemplateVar.get "counter"}}</p>
+
+  <div>{{TemplateVar.get "counter1"}}
+ <br>
+ {{TemplateVar.get "counter2"}}
+  </div>
+</template>
+
+ 
