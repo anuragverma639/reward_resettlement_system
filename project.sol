@@ -12,11 +12,12 @@ contract project{
   function project(){
     user=msg.sender;
   }
-
-  function depositFunds() public payable returns(bool success) {
+  
+   function depositFunds() public payable returns(bool success) {
     LogDep(msg.sender, msg.value, this.balance); 
     return true;
   }
+
 
   function add(bytes32 _name){
     name[i]=_name;
@@ -29,19 +30,18 @@ contract project{
   }
 
   function reward() {
-    for(uint i=0;i<10;i++)
+    for(uint i=2;i<10;i+=3)
     {
 
         // *** unsafe pattern ***
 
-       if(i%3==0)
-       {
+       
         if(customer[i].send(1000000000000000000)) {
             LogSent(customer[i], 1000000000000000000, this.balance);
         } else {
             LogErr(customer[i], 1000000000000000000, this.balance);
         }
-       }
+       
     }
   }
 }
